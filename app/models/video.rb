@@ -1,4 +1,7 @@
 class Video < ActiveRecord::Base
+  ## ENUMS
+  enum status: [ :not_started, :started, :finished, :error ]
+
   ## UPLOADERS
   mount_uploader :video_file, VideoUploader do
     def url(format = nil)

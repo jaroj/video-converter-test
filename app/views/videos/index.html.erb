@@ -12,6 +12,7 @@
     <% @videos.each do |video| %>
       <tr>
         <td><%= video.video_file %></td>
+        <td><%= video.status %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
         <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
